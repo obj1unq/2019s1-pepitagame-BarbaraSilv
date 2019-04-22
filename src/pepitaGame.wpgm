@@ -28,6 +28,17 @@ program PepitaGame {
 	keyboard.down().onPressDo { pepita.move(pepita.position().down(1)) }
 	keyboard.left().onPressDo { pepita.move(pepita.position().left(1)) }
 	keyboard.right().onPressDo { pepita.move(pepita.position().right(1)) }
+	
+	
+	keyboard.m().onPressDo{pepita.move(manzana.position())
+							pepita.come(manzana)
+							
+	}
+	
+	keyboard.a().onPressDo{pepita.move(alpiste.position())
+							pepita.come(alpiste)
+						
+	}
 		
 //	START
 	game.start()
