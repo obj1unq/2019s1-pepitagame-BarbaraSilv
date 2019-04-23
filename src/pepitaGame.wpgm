@@ -30,15 +30,14 @@ program PepitaGame {
 	keyboard.right().onPressDo { pepita.move(pepita.position().right(1)) }
 	
 	
-	keyboard.m().onPressDo{pepita.move(manzana.position())
-							pepita.come(manzana)
+	keyboard.m().onPressDo{ pepita.volarYComer(manzana)}
 							
-	}
 	
-	keyboard.a().onPressDo{pepita.move(alpiste.position())
-							pepita.come(alpiste)
+	
+	keyboard.a().onPressDo{pepita.volarYComer(alpiste)
 						
 	}
+	
 		
 //	START
 	game.start()
