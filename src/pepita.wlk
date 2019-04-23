@@ -68,11 +68,34 @@ object pepona{
 
 object pipa{
 	method image() = "pepitaCanchera.png"
-	method position() = game.at(1,1)
+	method position() = game.at(3,1)
 	method nombre()="pipa"
 }
 
-
+object roque{
+	var mochila = null
+	var property position = game.at(2,3)
+	
+	method image()= "jugador.png"
+	
+	method agarrarComida(comida){ 
+		if (mochila != comida) {
+			game.addVisualIn(mochila, game.at(1.ramdomUpto(8).truncate(0),1.ramdomUpto(8).truncate(0)))  
+			mochila = comida
+			game.removeVisual(comida)
+			
+		}
+	}
+	
+	method alimentar(ave){
+		
+	}
+	
+	method move(nuevaPosicion){
+		self.position(nuevaPosicion)
+	}
+}
+ 
 
 
 

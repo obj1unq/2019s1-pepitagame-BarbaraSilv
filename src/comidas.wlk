@@ -7,7 +7,9 @@ object manzana {
 	
 	method position() = game.at(5,1)
 	method energia() = 80
-	
+	method colisionasteCon(persona){
+		persona.agarrarComida(self)
+	}
 }
 
 object alpiste {
