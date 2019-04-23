@@ -10,6 +10,12 @@ program PepitaGame {
 	game.height(10)
 	game.width(10)
 	game.ground("suelo.png")
+//COLISIONES 
+//game.whenCollideDo(pepona,{golondrina => game.say(pepona,"hola")})
+//game.whenCollideDo(pepona,{golondrina => console.println("hola pepita"))
+
+//game.whenCollideDo(pepona,{golondrina => golondrina.nuevaAmiga(pepona)})
+//game.whenCollideDo(pepona,{golondrina => golondrina.nuevaAmiga(pipa)})
 
 //	VISUALES
 	game.addVisualIn(alpiste, game.at(5,5))

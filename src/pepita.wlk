@@ -12,7 +12,7 @@ object pepita {
 	 					"pepita-gorda-raw.png"
 	 				} else "pepita.png" 	
 	 					
-
+//
 
 	method come(comida) { 
 		energia = energia + comida.energia()

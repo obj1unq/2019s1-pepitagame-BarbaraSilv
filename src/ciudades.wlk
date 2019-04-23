@@ -12,4 +12,5 @@ object buenosAires {
 	method position() = game.at(1,1)
 	
 	method nombre() = "Buenos Aires"
+	//
 }
