@@ -22,10 +22,11 @@ program PepitaGame {
 //game.whenCollideDo(pepona,{golondrina => game.say(pepona,"hola")})
 //game.whenCollideDo(pepona,{golondrina => console.println("hola pepita"))
 
-	game.whenCollideDo(pepona, { golondrina => golondrina.nuevaAmiga(pepona) })
-	game.whenCollideDo(pipa, { golondrina => golondrina.nuevaAmiga(pipa) })
+	//game.whenCollideDo(pepona, { golondrina => golondrina.nuevaAmiga(pepona) })
+	//game.whenCollideDo(pipa, { golondrina => golondrina.nuevaAmiga(pipa) })
 
 	game.whenCollideDo(roque, { cosa => cosa.colisionasteCon(roque) })
+
 //	TECLADO
 	keyboard.h().onPressDo{ game.say(pepita, "Hola chiques!") }
 	keyboard.v().onPressDo{ pepita.volaHacia(villaGesell) }
@@ -41,8 +42,11 @@ program PepitaGame {
 	keyboard.down().onPressDo{ roque.move(roque.position().down(1)) }
 	keyboard.left().onPressDo{ roque.move(roque.position().left(1)) }
 	keyboard.right().onPressDo{ roque.move(roque.position().right(1)) }
-	keyboard.m().onPressDo{ pepita.volarYComer(manzana) }
-	keyboard.a().onPressDo{ pepita.volarYComer(alpiste) }
+	
+	
+	//keyboard.m().onPressDo{ pepita.volarYComer(manzana) }
+	//keyboard.a().onPressDo{ pepita.volarYComer(alpiste) }
+
 //	START
 	game.start()
 }

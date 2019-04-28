@@ -14,7 +14,10 @@ object manzana {
 
 object alpiste {
 	method image() = "alpiste.png" 
-							
+	
+	method colisionasteCon(persona){
+		persona.agarrarComida(self)
+	}						
 							
 	method position() = game.at(5,5)
 	method energia() = 5

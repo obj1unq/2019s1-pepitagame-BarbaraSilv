@@ -8,12 +8,16 @@ object pepita {
 
 	var property position = game.at(3,3)
 	var amiga= null
+	
+	
 	method image() = if (energia > 100) {
 	 					"pepita-gorda-raw.png"
 	 				} else "pepita.png" 	
 	 					
-//
 
+method colisionasteCon(persona){
+		persona.alimentar(self)
+	}
 	method come(comida) { 
 		energia = energia + comida.energia()
 		
@@ -78,17 +82,28 @@ object roque{
 	
 	method image()= "jugador.png"
 	
-	method agarrarComida(comida){ 
-		if (mochila != comida) {
-			game.addVisualIn(mochila, game.at(1.ramdomUpto(8).truncate(0),1.ramdomUpto(8).truncate(0)))  
-			mochila = comida
-			game.removeVisual(comida)
-			
-		}
+	method esNuevaComida(comida){
+	if (mochila != comida) {
+		game.addVisualIn(mochila, game.at((1.randomUpTo(8).truncate(0)),(1.randomUpTo(8).truncate(0))))  
+		mochila = comida
+		game.removeVisual(comida)
 	}
+}
+	method agarrarComida(comida){ 
+		if (mochila == null){
+			mochila = comida 
+			game.removeVisual(comida)
+		} 
+		
+		else self.esNuevaComida(comida)
+	}	
+	
+
 	
 	method alimentar(ave){
-		
+		ave.come(mochila)
+		game.addVisualIn(mochila, game.at((1.randomUpTo(8).truncate(0)),(1.randomUpTo(8).truncate(0))))  
+		mochila = null
 	}
 	
 	method move(nuevaPosicion){
@@ -96,6 +111,5 @@ object roque{
 	}
 }
  
-
 
 
