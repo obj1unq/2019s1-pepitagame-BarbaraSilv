@@ -107,7 +107,7 @@ object roque{
 			game.removeVisual(comida)
 		} else self.esNuevaComida(comida)
 	}	
-	//////
+	////////
 	method alimentar(ave){
 		ave.come(mochila)
 		game.addVisualIn(mochila, game.at((1.randomUpTo(8).truncate(0)),(1.randomUpTo(8).truncate(0))))  

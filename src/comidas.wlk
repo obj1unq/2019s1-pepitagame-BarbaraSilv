@@ -14,7 +14,7 @@ class Manzana {
 		golondrina.come(self)
 	}
 }
-
+//
 class Alpiste {
 	method image() = "alpiste.png" 
 	

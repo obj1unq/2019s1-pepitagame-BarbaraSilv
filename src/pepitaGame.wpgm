@@ -36,7 +36,7 @@ program PepitaGame {
 	keyboard.s().onPressDo { pepita.move(pepita.position().down(1)) }
 	keyboard.a().onPressDo { pepita.move(pepita.position().left(1)) }
 	keyboard.d().onPressDo { pepita.move(pepita.position().right(1)) }
-	
+	//
 	
 	keyboard.up().onPressDo{ roque.move(roque.position().up(1)) }
 	keyboard.down().onPressDo{ roque.move(roque.position().down(1)) }
